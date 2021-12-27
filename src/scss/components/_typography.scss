@@ -1,0 +1,104 @@
+html {
+    font-size: $font-size-base;
+}
+
+body {
+    font-family: $font-family-text;
+}
+
+strong {
+    font-weight: $font-weight-strong;
+}
+
+body,
+a,
+a:focus,
+a:active,
+a:visited,
+a:hover {
+    color: $font-color;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:not(.no-hover) {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $font-color;
+        transition: width .2s ease-out;
+    }
+
+    &:hover::after {
+        width: 100%;
+        transition: width .2s ease-out;
+    }
+}
+
+a svg,
+a:hover svg {
+    transition: transform .6s ease-in-out;
+}
+
+a:hover svg {
+    transform: rotateY(360deg);
+}
+
+p {
+    margin-top: 0;
+}
+
+h1, h2 {
+    font-size: $font-size-title;
+    font-family: $font-family-heading;
+    font-weight: $font-weight-strong;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 3px;
+    margin: 0 0 .3em;
+
+    @include screen($screen-s) {
+        margin: 1em 0;    
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 150px;
+        height: 42%;
+        background: $color-yellow-light;
+        z-index: -1;
+
+        @include screen($screen-s) {
+            width: 280px;
+            max-width: 100%;
+        }
+    }
+}
+
+.title {
+    font-family: $font-family-code;
+    font-weight: $font-weight-superstrong;
+    display: inline-block;
+    background: $bg-color-dark;
+    color: #fff;
+    padding: .3rem .6rem;
+    margin-bottom: 1rem;
+}
+
+
+small,
+footer,
+.text-small {
+    font-size: $font-size-small;
+}

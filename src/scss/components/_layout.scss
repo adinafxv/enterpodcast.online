@@ -1,0 +1,175 @@
+body {
+    background-color: $bg-color;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    @include screen($screen-m) {
+        flex-direction: row;
+    }
+}
+
+
+main {
+    flex: 1;
+    padding: 1rem;
+
+    @include screen($screen-l) {
+        padding: 2rem;
+    }
+
+    @include screen($screen-xl) {
+        padding: 3rem;
+    }
+}
+
+// ordering
+aside {
+    order: 1; 
+    flex: 1,
+}
+
+@include screen($screen-m) {
+    aside {
+        order: 0;
+        flex-basis: 30%;
+    }
+
+    main {
+        flex-basis: 70%;
+    }
+}
+
+aside {
+    background-color: $bg-color-accent;
+
+    
+    .top {
+        background-color: #ff6f59;
+        width: 100%;
+    }
+    
+    .logo {
+        position: relative;
+        top: 2rem;
+        width: 100%;
+        padding: 1rem;
+        margin-left: auto;
+        
+        @include screen($screen-m) {
+            top: 0;
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        @include screen($screen-l) {
+            padding: 2rem;
+        }
+
+        @include screen($screen-xl) {
+            padding: 3rem;
+        }
+    }
+
+    .aside-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        max-height: 1400px;
+    }
+
+    .contacts {
+        padding: 1rem;
+        
+        
+        @include screen($screen-l) {
+            padding: 2rem;
+        }
+
+        @include screen($screen-xl) {
+            padding: 3rem;
+        }
+    }
+
+    .contacts-item {
+        margin-bottom: 1.2rem;
+
+        strong {
+            display: block;
+            margin-bottom: .2rem;
+        }
+    }
+}
+
+
+main {
+    z-index: 2;
+    padding: 1rem;
+    background-color: rgba(255,255,255,.66);
+
+    @include screen($screen-m) {
+        margin-top: 0;
+        background-color: initial;
+        padding: 2rem;
+        padding-left: 0;
+        min-height: calc(100vh - #{$footer-height});
+    }
+}
+
+.bio {
+    max-width: 25rem;
+}
+
+.social {
+    color: $color-eigengrau;
+}
+
+footer {
+    background-color: $bg-color-dark;
+    color: $font-color-inverse;
+    font-size: 0.75rem;
+    height: $footer-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+}
+
+.footer-container {
+    padding: 0 1rem;
+
+    @include screen($screen-s) {
+        margin-left: auto;
+    }
+}
+
+.bio {
+    @include screen($screen-m) {
+        padding: 1rem;
+    }
+}
+
+.ico {
+    display: inline-block;
+    padding-right: 16px;   
+}
+
+.ico svg {
+    margin: 0.2em;
+    color: #16161d;
+    opacity: .9;
+}
+
+.logo svg {
+    color: #16161d;
+    opacity: .9;
+
+    display: none;
+
+    @include screen($screen-xs) {
+        display: block;
+    }
+}

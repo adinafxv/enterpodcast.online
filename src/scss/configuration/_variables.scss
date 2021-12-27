@@ -1,0 +1,33 @@
+$color-yellow: #ff6f5986;
+$color-yellow-light: #ffef62;
+$color-gray: #363636;
+$color-eigengrau: #16161d;
+
+$screen-xs: 400px;
+$screen-s: 600px;
+$screen-m: 750px;
+$screen-l: 1000px;
+$screen-xl: 1200px;
+
+$font: 'Source Code Pro', monospace;
+
+$font-family-heading: $font;
+$font-family-text: $font;
+$font-family-code: $font;
+
+$font-size-base: 175%;
+$font-size-title: 2.5rem;
+$font-size-small: .6rem;
+
+$font-weight-superstrong: 700;
+$font-weight-strong: 600;
+$font-weight-normal: 400;
+
+$font-color: $color-eigengrau;
+$font-color-inverse: #fff;
+
+$bg-color: #eee5e9;
+$bg-color-accent: $color-yellow;
+$bg-color-dark: $color-eigengrau;
+
+$footer-height: 3rem;

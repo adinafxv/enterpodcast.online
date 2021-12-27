@@ -1,0 +1,52 @@
+{% extends '_layouts/base.twig' %}
+
+{% block title %}Enter podcast{% endblock %}
+
+{% block bodyClass %}{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+<div class="container bg">
+  <aside>
+    <div class="aside-flex">
+      <div class="top">
+       <div class="logo" aria-label="logo consisting of radio waves and a word 'enter'">
+                {% include '_partials/_svg/_logo.svg' %} 
+        </div>
+      </div>
+       
+
+        <div class="contacts">
+          <div class="contacts-item social">
+            <strong>Sociály</strong></strong>
+              {% include '_partials/_share.twig' %}
+          </div>
+
+          <div class="contacts-item place">
+            <strong>Lokace</strong><!-- sídlo-->
+            <p>Praha, Česká republika</p>
+          </div>
+
+         
+
+        </div>
+    </div>
+    
+  </aside>
+
+
+  <main role="main">
+    <div class="text">
+      <h1>Enter podcast</h1>
+      <p class="bio">Podcast o&nbsp;nových začátcích a kódování. Už brzy online.</p>
+    </div>
+  </main>
+</div>
+  <footer role="contentinfo">
+  <div class="footer-container">
+    <span>Adina Foxova &copy;2021, </span>
+    <span>všechna práva vyhrazena</span>
+  </div>
+  </footer>
+{% endblock %}

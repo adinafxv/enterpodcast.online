@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+body {
+  background-color: #eee5e9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 750px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+}
+@media only screen and (min-width: 1000px) {
+  main {
+    padding: 2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main {
+    padding: 3rem;
+  }
+}
+
+aside {
+  order: 1;
+  flex: 1;
+}
+
+@media only screen and (min-width: 750px) {
+  aside {
+    order: 0;
+    flex-basis: 30%;
+  }
+
+  main {
+    flex-basis: 70%;
+  }
+}
+aside {
+  background-color: #ff6f5986;
+}
+aside .top {
+  background-color: #ff6f59;
+  width: 100%;
+}
+aside .logo {
+  position: relative;
+  top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  margin-left: auto;
+}
+@media only screen and (min-width: 750px) {
+  aside .logo {
+    top: 0;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  aside .logo {
+    padding: 2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  aside .logo {
+    padding: 3rem;
+  }
+}
+aside .aside-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-height: 1400px;
+}
+aside .contacts {
+  padding: 1rem;
+}
+@media only screen and (min-width: 1000px) {
+  aside .contacts {
+    padding: 2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  aside .contacts {
+    padding: 3rem;
+  }
+}
+aside .contacts-item {
+  margin-bottom: 1.2rem;
+}
+aside .contacts-item strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+main {
+  z-index: 2;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.66);
+}
+@media only screen and (min-width: 750px) {
+  main {
+    margin-top: 0;
+    background-color: initial;
+    padding: 2rem;
+    padding-left: 0;
+    min-height: calc(100vh - 3rem);
+  }
+}
+
+.bio {
+  max-width: 25rem;
+}
+
+.social {
+  color: #16161d;
+}
+
+footer {
+  background-color: #16161d;
+  color: #fff;
+  font-size: 0.75rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-end;
+}
+
+.footer-container {
+  padding: 0 1rem;
+}
+@media only screen and (min-width: 600px) {
+  .footer-container {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .bio {
+    padding: 1rem;
+  }
+}
+
+.ico {
+  display: inline-block;
+  padding-right: 16px;
+}
+
+.ico svg {
+  margin: 0.2em;
+  color: #16161d;
+  opacity: 0.9;
+}
+
+.logo svg {
+  color: #16161d;
+  opacity: 0.9;
+  display: none;
+}
+@media only screen and (min-width: 400px) {
+  .logo svg {
+    display: block;
+  }
+}
+
+html {
+  font-size: 175%;
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+}
+
+strong {
+  font-weight: 600;
+}
+
+body,
+a,
+a:focus,
+a:active,
+a:visited,
+a:hover {
+  color: #16161d;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:not(.no-hover) {
+  position: relative;
+}
+a:not(.no-hover)::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #16161d;
+  transition: width 0.2s ease-out;
+}
+a:not(.no-hover):hover::after {
+  width: 100%;
+  transition: width 0.2s ease-out;
+}
+
+a svg,
+a:hover svg {
+  transition: transform 0.6s ease-in-out;
+}
+
+a:hover svg {
+  transform: rotateY(360deg);
+}
+
+p {
+  margin-top: 0;
+}
+
+h1, h2 {
+  font-size: 2.5rem;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 3px;
+  margin: 0 0 0.3em;
+}
+@media only screen and (min-width: 600px) {
+  h1, h2 {
+    margin: 1em 0;
+  }
+}
+h1::before, h2::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 150px;
+  height: 42%;
+  background: #ffef62;
+  z-index: -1;
+}
+@media only screen and (min-width: 600px) {
+  h1::before, h2::before {
+    width: 280px;
+    max-width: 100%;
+  }
+}
+
+.title {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 700;
+  display: inline-block;
+  background: #16161d;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  margin-bottom: 1rem;
+}
+
+small,
+footer,
+.text-small {
+  font-size: 0.6rem;
+}

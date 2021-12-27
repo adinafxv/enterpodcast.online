@@ -1,0 +1,18 @@
+
+* {  box-sizing: border-box; }
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+
+// Config
+@import 'configuration/_variables';
+@import 'configuration/_mixins';
+
+// Components
+@import 'components/_background';
+@import 'components/_layout';
+@import 'components/_typography';
