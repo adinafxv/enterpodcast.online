@@ -201,7 +201,7 @@
     exports.clean = gulp.parallel(clean, cleanDistCached) 
 
     // Sequences:
-    exports.build = gulp.series(exports.clean, exports.copy, exports.styles, js, templates);
+    exports.build = gulp.series(exports.clean, exports.copy, exports.styles, js, templates, );
     exports.default = gulp.series(exports.clean, exports.copy, exports.styles, js, templates, sync, watcha);
     exports.dev = gulp.series(cleanDistCached, exports.copy, exports.styles, js, templates, sync, watcha);
 

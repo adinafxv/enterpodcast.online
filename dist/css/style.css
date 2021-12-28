@@ -61,7 +61,6 @@ aside .top {
 }
 aside .logo {
   position: relative;
-  top: 2rem;
   width: 100%;
   padding: 1rem;
   margin-left: auto;
@@ -176,7 +175,7 @@ footer {
   opacity: 0.9;
   display: none;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 750px) {
   .logo svg {
     display: block;
   }
@@ -239,7 +238,7 @@ p {
 }
 
 h1, h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-family: "Source Code Pro", monospace;
   font-weight: 600;
   letter-spacing: 1px;
@@ -250,6 +249,7 @@ h1, h2 {
 @media only screen and (min-width: 600px) {
   h1, h2 {
     margin: 1em 0;
+    font-size: 2.5rem;
   }
 }
 h1::before, h2::before {
