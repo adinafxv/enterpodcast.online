@@ -1,6 +1,7 @@
 # enterpodcast.online
 ### Very basic temporary website for [enterpodcast.online](https://enterpodcast.online)
-Deploy status: [![Netlify Status](https://api.netlify.com/api/v1/badges/4810411d-43a6-4709-9de7-5b084fb561c4/deploy-status)](https://app.netlify.com/sites/enter-podcast/deploys)
+Deploy status: [![Netlify Status](https://api.netlify.com/api/v1/badges/4810411d-43a6-4709-9de7-5b084fb561c4/deploy-status)](https://app.netlify.com/sites/enter-podcast/deploys)         
+
 used: twig, sass, gulp
 Oldschool, but works for now. Will focus on content first.
 
