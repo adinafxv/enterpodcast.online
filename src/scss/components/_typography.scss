@@ -73,7 +73,7 @@ h1, h2 {
     &::before {
         content: '';
         position: absolute;
-        bottom: -2px;
+        top: .8em;
         left: 0;
         width: 150px;
         height: 42%;
@@ -102,4 +102,9 @@ small,
 footer,
 .text-small {
     font-size: $font-size-small;
+}
+
+a.footer-link {
+    color: #fff;
+    text-decoration: underline;
 }
